@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Arduino: list connected boards",
+      "type": "shell",
+      "command": "arduino-cli",
+      "args": ["board", "list"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Arduino Yún: compile",
+      "type": "shell",
+      "command": "arduino-cli",
+      "args": ["compile", "--fqbn", "arduino:avr:yun", "${workspaceFolder}/ArduinoYunLedBlink"],
+      "group": {"kind": "build", "isDefault": true},
+      "problemMatcher": []
+    },
+    {
+      "label": "Arduino Yún: compile and upload (USB)",
+      "type": "shell",
+      "command": "arduino-cli",
+      "args": ["compile", "--fqbn", "arduino:avr:yun", "--upload", "--port", "${input:yunPort}", "${workspaceFolder}/ArduinoYunLedBlink"],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "yunPort",
+      "type": "promptString",
+      "description": "Arduino Yún USB port from 'Arduino: list connected boards' (e.g. COM3, /dev/ttyACM0)",
+      "default": "COM3"
+    }
+  ]
+}

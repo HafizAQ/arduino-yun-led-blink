@@ -1,0 +1,11 @@
+# Arduino CLI build artifacts
+build/
+*.hex
+*.elf
+*.eep
+*.bin
+*.map
+# OS/editor caches
+.DS_Store
+Thumbs.db
+.vscode/.browse.c_cpp.db*
