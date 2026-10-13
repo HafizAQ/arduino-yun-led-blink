@@ -197,4 +197,4 @@ Create an **empty** GitHub repository first and replace `YOUR_USERNAME` with you
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE].
